@@ -46,9 +46,11 @@ Rails.application.routes.draw do
   #  - Add some static HTML to mock up the response that you want to send back.
   #  - Write the Ruby to make it dynamic, and work properly.
 
-  # /roll/1/6
-  # /roll/2/6
-  # /roll/3/6
+  get("/roll/1/6", {:controller => "dice", :action => "roll_1d6s"})
+  get("/roll/2/6", {:controller => "dice", :action => "roll_2d6s"})
+  get("/roll/3/6", {:controller => "dice", :action => "roll_3d6s"})
+  get("/roll/4/6", {:controller => "dice", :action => "roll_4d6s"})
+
   # /roll/4/6
   # /roll/5/6
   # /roll/6/6
